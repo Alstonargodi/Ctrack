@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CourierTrack</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="Company">
+        <item>JNE</item>
+        <item>POS Indonesia</item>
+        <item>Si Cepat</item>
+        <item>Wahana</item>
+    </string-array>
+</resources>
