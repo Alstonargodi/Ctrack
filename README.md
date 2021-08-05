@@ -45,7 +45,7 @@ Front page
 <img src="https://github.com/AlstonArgodi01/Ctrack/blob/master/Screenshot_1628175909.png" width="20%">
 
 
-<img src="https://github.com/AlstonArgodi01/Ctrack/blob/master/Screenshot_1628175909.png" width="20%">
+<img src="https://github.com/AlstonArgodi01/Ctrack/blob/master/Screenshot_1628175915.png" width="20%">
 
 
 
