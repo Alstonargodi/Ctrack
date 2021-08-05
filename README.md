@@ -41,7 +41,7 @@ Ctrack stand for Courier Track or Air wayBill tracker. so this app will be track
     It's basically SQL but a lite version for android so it can keep data in local storage
 # :iphone: Screenshot
 Front page
-!(https://github.com/AlstonArgodi01/Ctrack/blob/master/Screenshot_1628175909.png)
+![](https://github.com/AlstonArgodi01/Ctrack/blob/master/Screenshot_1628175909.png)
 
 
 
