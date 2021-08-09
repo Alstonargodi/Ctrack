@@ -1,4 +1,4 @@
-<img src="https://github.com/AlstonArgodi01/Ctrack/blob/master/Screenshot_1628175909.png" width="20%">
+<img src="https://github.com/Alstonargodi/Ctrack/blob/master/summary.png" width="30%">
 # 📦 Ctrack 
 Ctrack stand for Courier Track or Air wayBill tracker. so this app will be tracking where our package on the route, in this app we can monitoring our packet delivery so we can't get lose. Currently i'm still using Local Api provide By [Cek Resi](https://github.com/farizdotid/DAFTAR-API-LOKAL-INDONESIA#jasa-pengiriman).in the future i'll add international courier
 
