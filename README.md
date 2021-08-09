@@ -41,7 +41,7 @@ Ctrack stand for Courier Track or Air wayBill tracker. so this app will be track
 
     It's basically SQL but a lite version for android so it can keep data in local storage
     
-# Mad Score
+# Mad score
 
 <img src="https://github.com/Alstonargodi/Ctrack/blob/master/summary.png" width="100%">
 
