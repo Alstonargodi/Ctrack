@@ -1,4 +1,4 @@
-<img src="https://github.com/Alstonargodi/Ctrack/blob/master/summary.png" width="50%">
+<img src="https://github.com/Alstonargodi/Ctrack/blob/master/summary.png" width="70%">
 
 # 📦 Ctrack 
 
