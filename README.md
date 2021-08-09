@@ -1,5 +1,3 @@
-<img src="https://github.com/Alstonargodi/Ctrack/blob/master/summary.png" width="70%">
-
 # 📦 Ctrack 
 
 Ctrack stand for Courier Track or Air wayBill tracker. so this app will be tracking where our package on the route, in this app we can monitoring our packet delivery so we can't get lose. Currently i'm still using Local Api provide By [Cek Resi](https://github.com/farizdotid/DAFTAR-API-LOKAL-INDONESIA#jasa-pengiriman).in the future i'll add international courier
@@ -42,6 +40,13 @@ Ctrack stand for Courier Track or Air wayBill tracker. so this app will be track
 6. Room
 
     It's basically SQL but a lite version for android so it can keep data in local storage
+    
+# Mad Score
+
+<img src="https://github.com/Alstonargodi/Ctrack/blob/master/summary.png" width="80%">
+
+
+
 # :iphone: Screenshot
 Front page
 
