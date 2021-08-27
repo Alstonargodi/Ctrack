@@ -44,13 +44,6 @@ Ctrack stand for Courier Track or Air wayBill tracker. so this app will be track
 # Mad score
 
 <img src="https://github.com/Alstonargodi/Ctrack/blob/master/summary.png" width="100%">
-
-
-
-
-<img src="https://github.com/Alstonargodi/Ctrack/blob/master/jetpack.png" width="100%">
-
-
 # :iphone: Screenshot
 Front page
 
