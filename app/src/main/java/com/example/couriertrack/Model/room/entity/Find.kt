@@ -1,4 +1,4 @@
-package com.example.couriertrack.room
+package com.example.couriertrack.Model.room.entity
 
 import android.os.Parcelable
 import androidx.room.Entity
@@ -10,5 +10,7 @@ import kotlinx.android.parcel.Parcelize
 data class Find(
         @PrimaryKey(autoGenerate = true)
         val id : Int,
-        val number : Int
+        val date : String,
+        val desc : String,
+        val location : String
 ): Parcelable

@@ -1,14 +1,15 @@
-package com.example.couriertrack.Module
+package com.example.couriertrack.Model.builder
 
-import com.example.couriertrack.API.GetApi
+import com.example.couriertrack.Model.builder.Constant.baseurl
+import com.example.couriertrack.Model.cekresi.GetApi
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-private const val base_url = "https://api.binderbyte.com/v1/"
-object AppModule {
+
+object retrofitbuilder {
         private val retrofit by lazy {
             Retrofit.Builder()
-                .baseUrl(base_url)
+                .baseUrl(baseurl)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
         }

@@ -1,18 +1,15 @@
-package com.example.couriertrack.Adapter
+package com.example.couriertrack.Fragment.Adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.couriertrack.API.History
+import com.example.couriertrack.Model.room.entity.Find
 import com.example.couriertrack.R
-import com.example.couriertrack.room.Find
 import kotlinx.android.synthetic.main.card_history.view.*
-import org.w3c.dom.Text
 
 class Historyadapter:RecyclerView.Adapter<Historyadapter.viewHolder> () {
-    private var data = emptyList<History>()
+    private var data = emptyList<Find>()
 
     class viewHolder(item : View): RecyclerView.ViewHolder(item) {}
 
@@ -33,7 +30,7 @@ class Historyadapter:RecyclerView.Adapter<Historyadapter.viewHolder> () {
     }
 
     //set data kedalam adapter
-    fun setdata(find : List<History>){
+    fun setdata(find : List<Find>){
         data = find
         notifyDataSetChanged()
     }

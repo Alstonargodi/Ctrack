@@ -1,11 +1,7 @@
-package com.example.couriertrack.API
+package com.example.couriertrack.Model.cekresi
 
 
-import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
-import androidx.annotation.Keep
-import kotlinx.android.parcel.Parcelize
-import java.math.BigInteger
 
 data class Summary(
     @SerializedName("amount")

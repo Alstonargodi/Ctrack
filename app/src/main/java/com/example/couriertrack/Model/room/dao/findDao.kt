@@ -1,7 +1,8 @@
-package com.example.couriertrack.room
+package com.example.couriertrack.Model.room.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.example.couriertrack.Model.room.entity.Find
 
 @Dao
 abstract class findDao {

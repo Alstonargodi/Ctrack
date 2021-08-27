@@ -1,12 +1,12 @@
-package com.example.couriertrack.Viewmodel
+package com.example.couriertrack.Viewmodel.room
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import com.example.couriertrack.Repo.Roomrepo
-import com.example.couriertrack.room.Find
-import com.example.couriertrack.room.findDatabase
+import com.example.couriertrack.Repo.Room.Roomrepo
+import com.example.couriertrack.Model.room.entity.Find
+import com.example.couriertrack.Model.room.database.findDatabase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -26,9 +26,4 @@ class roomviewmodel(application : Application): AndroidViewModel(application) {
         }
     }
 
-    fun deletehistory(find: Find){
-        viewModelScope.launch(Dispatchers.IO) {
-            repo.deletehistory(find)
-        }
-    }
 }
