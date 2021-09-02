@@ -23,6 +23,7 @@ Ctrack stands for Courier Track or Air wayBill tracker. so this application will
 
 # :iphone: Docu
 
+[Diagram](https://github.com/Alstonargodi/Ctrack/blob/master/Courirertrackd.png)
 
 <img src="https://github.com/Alstonargodi/Ctrack/blob/master/bannerces.png" width="100%">
 
