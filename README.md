@@ -5,17 +5,25 @@ Ctrack stands for Courier Track or Air wayBill tracker. so this application will
 # :pencil2: Features
 
 1. AWB finder 
-2. Location History
-3. AWB Summary 
-4. AWB History
+
+    finding last package location by airwaybill
+3. Location History
+
+    History last location package where it be
+5. AWB Summary 
+
+    Summary of package details
+7. AWB History
+
+    last search history that has been entered previously
 
 # :wrench: Implementation
-1. Kotlin
-2. MVVM    
-3. Android Fragment
-4. Retrofit
-5. Courutines   
-6. Room
+1. Kotlin, basic programming language for development
+2. MVVM, architecture separation between View and model in three distinct groups
+3. Fragment, fragment defines and manages its location, has its own lifecycle, and can handle its own input events
+4. Retrofit, library provides a powerful framework for authenticating and interacting with API
+5. Courutines, design pattern that you can use on Android to check asynchronously executed code
+6. Room, local storage inside android with sql lite
     
 # Mad score
 
