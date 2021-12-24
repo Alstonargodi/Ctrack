@@ -1,60 +1,46 @@
 # 📦 Ctrack 
 
-Ctrack stand for Courier Track or Air wayBill tracker. so this app will be tracking where our package on the route, in this app we can monitoring our packet delivery so we can't get lose. Currently i'm still using Local Api provide By [Cek Resi](https://github.com/farizdotid/DAFTAR-API-LOKAL-INDONESIA#jasa-pengiriman).in the future i'll add international courier
+Ctrack stands for Courier Track or Air wayBill tracker. so this application will track where the package is based on the Airwaybill.Currently, I'm still using Local API provides By [Cek Resi](https://github.com/farizdotid/DAFTAR-API-LOKAL-INDONESIA#jasa-pengiriman).maybe in the future I'll add an international courier
 
-# :pencil2: Features
-1. AWB finder
 
-     Where you put the AWB and then search it
-     
-2. History
- 
-    Keep your awb number in the list,it can make it easier if you need it again next time
+
+<h2>:pencil2: Features</h2>
+
+1. AWB finder 
+
+    finding last package location by airwaybill
+3. Location History
+
+    History last location package where it be
+5. AWB Summary 
+
+    Summary of package details
+7. AWB History
+
+    last search history that has been entered previously
+
+<h2>:wrench: Implementation</h2>
+
+1. Kotlin, basic programming language for development
+2. MVVM, architecture separation between View and model in three distinct groups
+3. Fragment, fragment defines and manages its location, has its own lifecycle, and can handle its own input events
+4. Retrofit, library provides a powerful framework for authenticating and interacting with API
+5. Courutines, design pattern that you can use on Android to check asynchronously executed code
+6. Room, local storage inside android with sql lite
     
-3. AWB Summary
+<h2>Mad Score</h2>
 
-    It provide detail about the package and Status
-    
-4. AWB History
-
-    is different from number 2, because this feature will provide history about the last location the package
+<img src="https://github.com/Alstonargodi/Ctrack/blob/master/summary.png" width="60%">
 
 
-# :wrench: Implementation
-1. Kotlin
-2. MVVM
+<h2>:iphone: Docu</h2>
 
-   Recomended architecture from GOOGLE
-   Give data shared to other fragment
-   
-3. Android Fragment
-
-4. Retrofit
-
-   Provide type-safe REST client for Android and Java which aims to make it easier to consume RESTful web services
-   
-5. Spinner
-
-   Give more option for choosing courier
-    
-6. Room
-
-    It's basically SQL but a lite version for android so it can keep data in local storage
-    
-# Mad score
-
-<img src="https://github.com/Alstonargodi/Ctrack/blob/master/summary.png" width="100%">
+[Diagram](https://github.com/Alstonargodi/Ctrack/blob/master/Courirertrackd.png)
 
 
+Screenshot :
 
-
-<img src="https://github.com/Alstonargodi/Ctrack/blob/master/jetpack.png" width="100%">
-
-
-# :iphone: Screenshot
-Front page
-
-<img src="https://github.com/AlstonArgodi01/Ctrack/blob/master/Screenshot_1628175909.png" width="30%">
+<img src="https://github.com/Alstonargodi/Ctrack/blob/master/bannerces.png" width="100%">
 
 
 
