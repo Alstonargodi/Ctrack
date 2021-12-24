@@ -96,12 +96,13 @@
 
         <Button
             android:id="@+id/btn_find"
-            android:layout_width="103dp"
-            android:layout_height="36dp"
+            android:layout_width="127dp"
+            android:layout_height="37dp"
             android:background="@drawable/corner10"
             android:backgroundTint="#03A9F4"
             android:text="Find"
             android:textColor="@color/white"
+            app:backgroundTint="#00BCD4"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

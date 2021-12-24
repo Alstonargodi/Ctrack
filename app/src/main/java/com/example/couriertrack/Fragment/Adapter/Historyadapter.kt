@@ -4,12 +4,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.couriertrack.Model.Track
 import com.example.couriertrack.Model.room.entity.Find
 import com.example.couriertrack.R
 import kotlinx.android.synthetic.main.card_history.view.*
 
 class Historyadapter:RecyclerView.Adapter<Historyadapter.viewHolder> () {
-    private var data = emptyList<Find>()
+    private var data = emptyList<Track>()
 
     class viewHolder(item : View): RecyclerView.ViewHolder(item) {}
 
@@ -21,8 +22,7 @@ class Historyadapter:RecyclerView.Adapter<Historyadapter.viewHolder> () {
     override fun onBindViewHolder(holder: Historyadapter.viewHolder, position: Int) {
         var curitem = data[position]
         holder.itemView.TV_DATE.text = curitem.date.toString()
-        holder.itemView.TV_DESC.text = curitem.desc.toString()
-        holder.itemView.TV_LOCATION.text = curitem.location.toString()
+        holder.itemView.TV_DESC.text = curitem.location.toString()
     }
 
     override fun getItemCount(): Int {
@@ -30,7 +30,7 @@ class Historyadapter:RecyclerView.Adapter<Historyadapter.viewHolder> () {
     }
 
     //set data kedalam adapter
-    fun setdata(find : List<Find>){
+    fun setdata(find : List<Track>){
         data = find
         notifyDataSetChanged()
     }

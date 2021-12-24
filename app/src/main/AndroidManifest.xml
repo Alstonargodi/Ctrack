@@ -2,21 +2,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.couriertrack">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ctrack"
         android:label="@string/app_name"
-        android:usesCleartextTraffic="true"
         android:networkSecurityConfig="@xml/security"
         android:roundIcon="@drawable/ctrack"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CourierTrack">
+        android:theme="@style/Theme.CourierTrack"
+        android:usesCleartextTraffic="true">
         <activity
-            android:name=".Fragment.Activity_detailresi"
+            android:name=".Detail_resi"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">

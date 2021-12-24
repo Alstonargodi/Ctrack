@@ -8,8 +8,8 @@ import retrofit2.Response
 
 class Mainrepo {
     //get api data : data,message,status
-    suspend fun getsum(courier: String,resi: Long): Response<Api>{
-        return retrofitbuilder.api.getSummary(courier,resi)
+    suspend fun getsum(apikey: String,courier: String,resi: String): Response<Api>{
+        return retrofitbuilder.api.getSummary(apikey,courier,resi)
     }
 
 }

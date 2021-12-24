@@ -11,8 +11,8 @@ import retrofit2.http.Query
 interface GetApi {
    @GET("track")
    suspend fun getSummary(
+      @Query("api_key") apikey : String = api_key,
       @Query("courier") kurir : String,
-      @Query("awb") awb : Long,
-      @Query("api_key") apikey : String = api_key
+      @Query("awb") awb : String,
    ): Response<Api>
 }

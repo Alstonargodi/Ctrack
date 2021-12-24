@@ -7,7 +7,7 @@ data class Summary(
     @SerializedName("amount")
     var amount: String,
     @SerializedName("awb")
-    var awb: Long,
+    var awb: String,
     @SerializedName("courier")
     var courier: String,
     @SerializedName("date")

@@ -16,9 +16,9 @@ class Viewmodelapi(val repo: Mainrepo): ViewModel(){
     val historyresponse : MutableLiveData<Response<Api>> = MutableLiveData()
 
 
-    fun postsummary(courier: String,resi: Long){
+    fun postsummary(apikey : String,courier: String,resi: String){
         viewModelScope.launch{
-            val responapi = repo.getsum(courier,resi)
+            val responapi = repo.getsum(apikey,courier,resi)
             summaryrespons.value = responapi
         }
     }

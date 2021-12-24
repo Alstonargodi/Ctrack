@@ -1,5 +1,6 @@
 package com.example.couriertrack.Fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.couriertrack.Detail_resi
 import com.example.couriertrack.Fragment.Adapter.Resiadapter
 import com.example.couriertrack.Fragment.util.swipedelete
 import com.example.couriertrack.Model.room.entity.Resi
@@ -60,27 +62,16 @@ class Home : Fragment() {
                 val find = ET_NORESI.text
                 val cari = 8825112045716759 //test
                 if (find.isNotEmpty()){
-                    val bundle = bundleOf("awb" to cari)
-                    findNavController().navigate(R.id.action_home_to_detailresi, bundle)
+                    val intent = Intent(context,Detail_resi::class.java)
+                    intent.putExtra("resicari",find.toString())
+                    startActivity(intent)
                 }else{
                     Toast.makeText(context,"Please fill out",Toast.LENGTH_SHORT).show()
                 }
-
-            addresi()
         }
-
 
         return view
     }
 
-    private fun addresi(){
-        val resi = ET_NORESI.text.toString()
-        val kurir = "jne"
-        val input = Resi(
-            0,
-            kurir,
-            Integer.parseInt(resi.toString())
-        )
-        vresimodel.add(input)
-    }
+
 }
