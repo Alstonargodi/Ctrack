@@ -1,11 +1,24 @@
 <resources>
     <string name="app_name">CourierTrack</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string-array name="Company">
-        <item>JNE</item>
-        <item>POS Indonesia</item>
-        <item>Si Cepat</item>
-        <item>Wahana</item>
+        <item>jne</item>
+        <item>pos indonesia</item>
+        <item>sicepat</item>
+        <item>wahana</item>
+        <item>anter aja</item>
+        <item>tiki</item>
+        <item>ninja</item>
+        <item>lion</item>
+        <item>pcp express</item>
+        <item>jet express</item>
+        <item>rex express</item>
+        <item>first logistic</item>
+        <item>id express</item>
+        <item>shopee express</item>
+        <item>kgx express</item>
+        <item>sap express</item>
+        <item>jx express</item>
+        <item>rpx</item>
     </string-array>
 </resources>

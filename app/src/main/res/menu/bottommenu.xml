@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="airwaybill"></item>
-    <item android:title="ongkir"></item>
+    <item
+        android:title="cari resi"
+        android:icon="@drawable/search"
+        android:id="@+id/home"
+        >
+
+    </item>
+    <item
+        android:title="cek ongkir"
+        android:icon="@drawable/dompet"
+        android:id="@+id/cekongkit"
+        >
+    </item>
 </menu>

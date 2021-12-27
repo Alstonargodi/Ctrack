@@ -2,10 +2,12 @@ package com.example.couriertrack.Fragment
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.SimpleAdapter
 import android.widget.Toast
 import androidx.core.os.bundleOf
@@ -26,19 +28,13 @@ import com.example.couriertrack.Viewmodel.room.resiviewmodel
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-//private const val ARG_PARAM1 = "param1"
-//private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [Home.newInstance] factory method to
- * create an instance of this fragment.
- */
 class Home : Fragment() {
     lateinit var vmodel : Viewmodelapi
     lateinit var vresimodel : resiviewmodel
+
+
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
@@ -52,25 +48,102 @@ class Home : Fragment() {
         vresimodel.readresi.observe(viewLifecycleOwner, Observer { response->
             adapter.setdata(response)
         })
-        //swipe recyclerview
 
+
+
+        view.spinn_service.onItemSelectedListener = object : AdapterView.OnItemSelectedListener , AdapterView.OnItemClickListener{
+            override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {}
+
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                val item = parent?.getItemAtPosition(position)
+
+                when(item){
+                    "jne"->{
+                        findresi("jne")
+                    }
+                    "sicepat"->{
+                        findresi("sicepat")
+                    }
+                    "wahana"->{
+                        findresi("wahana")
+                    }
+                    "tiki"->{
+                        findresi("tiki")
+                    }
+                    "anteraja"->{
+                        findresi("anteraja")
+                    }
+                    "jnt"->{
+                        findresi("jnt")
+                    }
+                    "ninja"->{
+                        findresi("ninja")
+                    }
+                    "lion"->{
+                        findresi("lion")
+                    }
+                    "pcp express"->{
+                        findresi("pcpexpress")
+                    }
+                    "jet express"->{
+                        findresi("jetexpress")
+                    }
+                    "rex express"->{
+                        findresi("rexexpress")
+                    }
+                    "first logistic"->{
+                        findresi("firstlogistic")
+                    }
+                    "id express"->{
+                        findresi("idexpress")
+                    }
+                    "shopee express"->{
+                        findresi("shopeeexpress")
+                    }
+                    "kgx express"->{
+                        findresi("kgxexpress")
+                    }
+                    "sap express"->{
+                        findresi("sapexpress")
+                    }
+                    "jx express"->{
+                        findresi("jxexpress")
+                    }
+                    "rpx"->{
+                        findresi("rpx")
+                    }
+                }
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                findresi("jne")
+            }
+        }
+
+
+        return view
+    }
+
+    private fun findresi(kurir : String){
         //api search
         val repository = Mainrepo()
         val vmoddelfactory = Vmfactory(repository)
         vmodel = ViewModelProvider(this,vmoddelfactory).get(Viewmodelapi::class.java)
-        view.btn_find.setOnClickListener {
-                val find = ET_NORESI.text
-                val cari = 8825112045716759 //test
+
+        btn_find.setOnClickListener {
+            val find = ET_NORESI.text
+
                 if (find.isNotEmpty()){
                     val intent = Intent(context,Detail_resi::class.java)
                     intent.putExtra("resicari",find.toString())
+                    intent.putExtra("resikurir",kurir.toString())
                     startActivity(intent)
                 }else{
                     Toast.makeText(context,"Please fill out",Toast.LENGTH_SHORT).show()
                 }
         }
 
-        return view
+
     }
 
 

@@ -19,9 +19,8 @@ class Resiadapter:RecyclerView.Adapter<Resiadapter.viewholder>() {
 
     override fun onBindViewHolder(holder: Resiadapter.viewholder, position: Int) {
        var curitem = dataresi[position]
-        holder.itemView.cv_kurir.text = curitem.kurir
         holder.itemView.CV_AWB.text = curitem.resi.toString()
-
+        holder.itemView.tvhome_kurir.text = curitem.kurir.toString()
     }
 
 

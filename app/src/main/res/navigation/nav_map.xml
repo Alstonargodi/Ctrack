@@ -18,10 +18,18 @@
         <action
             android:id="@+id/action_home_to_detailresi"
             app:destination="@id/detailresi" />
+        <action
+            android:id="@+id/action_home_to_cekongkit"
+            app:destination="@id/cekongkit" />
     </fragment>
     <fragment
         android:id="@+id/detailresi"
         android:name="com.example.couriertrack.Fragment.Detailresi"
         android:label="fragment_detailresi"
         tools:layout="@layout/fragment_detailresi" />
+    <fragment
+        android:id="@+id/cekongkit"
+        android:name="com.example.couriertrack.Cekongkit"
+        android:label="fragment_cekongkit"
+        tools:layout="@layout/fragment_cekongkit" />
 </navigation>

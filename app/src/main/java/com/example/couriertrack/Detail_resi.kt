@@ -3,15 +3,19 @@ package com.example.couriertrack
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.couriertrack.Fragment.Adapter.Historyadapter
 import com.example.couriertrack.Model.Track
 import com.example.couriertrack.Model.builder.Constant
+import com.example.couriertrack.Model.room.entity.Resi
 import com.example.couriertrack.Repo.api.Mainrepo
 import com.example.couriertrack.Viewmodel.api.Viewmodelapi
 import com.example.couriertrack.Viewmodel.api.Vmfactory
+import com.example.couriertrack.Viewmodel.room.resiviewmodel
+import com.example.couriertrack.databinding.ActivityDetailResiBinding
 import kotlinx.android.synthetic.main.activity_detail_resi.*
 import kotlinx.android.synthetic.main.activity_detail_resi.recyclerhistory
 import kotlinx.android.synthetic.main.activity_detail_resi.tv_courier
@@ -26,37 +30,51 @@ import kotlinx.android.synthetic.main.activity_detail_resi.tv_weight
 
 
 class Detail_resi : AppCompatActivity() {
-
-
     private var datalist = ArrayList<Track>()
     private var adapter = Historyadapter()
 
     lateinit var viewmodelresi : Viewmodelapi
+    lateinit var resiroom : resiviewmodel
+
+    lateinit var binding : ActivityDetailResiBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail_resi)
+        binding = ActivityDetailResiBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         //api search
         val repository = Mainrepo()
         val vmoddelfactory = Vmfactory(repository)
         viewmodelresi = ViewModelProvider(this,vmoddelfactory).get(Viewmodelapi::class.java)
+        resiroom = ViewModelProvider(this).get(resiviewmodel::class.java)
 
         //history
         adapter = Historyadapter()
-        val recview = recyclerhistory
+        val recview = binding.recyclerhistory
         recview.adapter = adapter
         recview.layoutManager = LinearLayoutManager(this)
 
 
         datalist = arrayListOf()
         val cari = intent.getStringExtra("resicari")
-        findresi(cari!!)
+        val kurir = intent.getStringExtra("resikurir")
+        findresi(kurir!!,cari!!)
+
+        binding.btnfavResi.setOnClickListener {
+            val resi = intent.getStringExtra("resicari")
+            val kurir = intent.getStringExtra("resikurir")
+            addresi(kurir!!,resi!!)
+
+        }
+
+
     }
 
-    private fun findresi(cari : String) {
+    private fun findresi(kurir : String,cari : String) {
         val apikey = Constant.api_key
 
-        viewmodelresi.postsummary(apikey, "jne", cari)
+        viewmodelresi.postsummary(apikey, kurir, cari)
         viewmodelresi.summaryrespons.observe(this, Observer { response ->
             tv_resi.setText(response.body()?.data?.summary?.awb.toString())
             tv_status.setText(response.body()?.data?.summary?.status.toString())
@@ -81,5 +99,17 @@ class Detail_resi : AppCompatActivity() {
                 adapter.setdata(datalist)
             }
         })
+    }
+
+
+    private fun addresi(kurir: String,cari : String){
+        val data = Resi(
+            0,
+            kurir,
+            cari
+        )
+
+        Toast.makeText(this,"add to favorite",Toast.LENGTH_SHORT).show()
+        resiroom.add(data)
     }
 }

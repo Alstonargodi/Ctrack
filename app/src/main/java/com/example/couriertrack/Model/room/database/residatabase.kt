@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.example.couriertrack.Model.room.dao.residao
 import com.example.couriertrack.Model.room.entity.Resi
 
-@Database(entities = [Resi::class],version = 1,exportSchema = false)
+@Database(entities = [Resi::class],version = 2,exportSchema = false)
 abstract class residatabase: RoomDatabase() {
   abstract fun residao() : residao
 
@@ -25,7 +25,7 @@ abstract class residatabase: RoomDatabase() {
                         context.applicationContext,
                         residatabase::class.java,
                         "residatabase"
-                    ).build()
+                    ).fallbackToDestructiveMigration().build()
                     minstace = builder
                     return builder
                 }

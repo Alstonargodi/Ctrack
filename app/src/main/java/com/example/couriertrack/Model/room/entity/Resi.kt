@@ -11,5 +11,5 @@ data class Resi(
     @PrimaryKey(autoGenerate = true)
     val id : Int,
     val kurir : String,
-    val resi : Int
+    val resi : String
 ) : Parcelable
